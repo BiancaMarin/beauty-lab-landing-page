@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,800;1,6..96,500&family=Fredoka+One&family=Hurricane&family=Poppins:wght@300;400;700;800&family=Roboto&family=Shadows+Into+Light&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Bodoni Moda', sans-serif;
+}
+.hero-section {
+  height: 80vh;
+  background-image: url('../images/women.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-menu {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-menu li {
+  list-style-type: none;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar-menu li a:hover {
+  color: #d72323;
+}
+
+.hero-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+}
+
+.hero-section h1 {
+  color: #d72323;
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+.hero-section p {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.hero-section .btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.hero-section .btn button {
+  width: 12rem;
+  height: 4rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.hero-section .btn button:hover {
+  background-color: #d72323;
+  border: none;
+  transition: 0.5s ease-in-out;
+  transform: scale(0.9);
+}
