@@ -95,6 +95,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 .haircuts h1 {
@@ -124,7 +125,7 @@
   width: 350px;
   height: 450px;
   cursor: pointer;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   padding: 0;
   margin: 0;
 }
@@ -132,7 +133,7 @@
 .haircuts .gallery img:hover {
   transition: 0.5s ease-in-out;
   transform: scale(0.9);
-  filter: grayscale(0);
+  /* filter: grayscale(0); */
 }
 
 #lightbox {

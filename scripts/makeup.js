@@ -4,7 +4,7 @@ const imageArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 imageArray.forEach((i) => {
   const img = document.createElement('img');
-  img.src = `/images/image-${i}.jpg`;
+  img.src = `/images/makeup-${i}.jpg`;
   img.alt = `Image nr. ${i}`;
   img.classList.add('gallery');
   gallery.appendChild(img);

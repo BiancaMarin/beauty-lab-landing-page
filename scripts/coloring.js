@@ -1,6 +1,6 @@
 const gallery = document.querySelector('[data-gallery]');
 const displayImage = document.querySelector('[data-display]');
-const imageArray = [1, 2, 3, 4, 5, 6];
+const imageArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 imageArray.forEach((i) => {
   const img = document.createElement('img');
@@ -21,6 +21,14 @@ images.forEach((image) => {
     const newImg = document.createElement('img');
     newImg.classList.add('newImg');
     newImg.src = image.src;
+
+    const rightBtn = document.createElement('button');
+    rightBtn.innerHTML = 'right';
+    const leftBtn = document.createElement('button');
+    leftBtn.innerHTML = 'left';
+
+    newImg.appendChild(rightBtn);
+    newImg.appendChild(leftBtn);
 
     if (lightbox.firstChild) {
       lightbox.removeChild(lightbox.firstChild);
