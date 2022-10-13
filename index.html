@@ -13,6 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script defer src="scripts/main.js"></script>
   </head>
   <body>
     <main class="hero-section">
@@ -43,12 +44,20 @@
             />
           </svg>
         </div>
-        <ul class="navbar-menu">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html">About</a></li>
-          <li><a href="../index.html">Services</a></li>
-          <li><a href="../index.html">Contact</a></li>
-        </ul>
+        <div class="toggle-button" data-button>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="navbar-menu" data-menu>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Services</a></li>
+            <li><a href="index.html">Gallery</a></li>
+            <li><a href="index.html">Contact</a></li>
+          </ul>
+        </div>
       </nav>
       <article class="hero-article">
         <h1>Beauty Lab</h1>
@@ -81,12 +90,14 @@
       <h2>My services</h2>
       <div class="container">
         <article class="card">
-          <h3>Lovely <span>HAIRCUTS and HAIRSTYLES</span></h3>
+          <h3>Lovely <span>HAIRSTYLES</span></h3>
           <ul>
             <li>New trends</li>
             <li>Quality products</li>
           </ul>
-          <button><a href="pages/haircuts.html">Discover more</a></button>
+          <div>
+            <img class="hair-icon" src="images/hair.png" alt="Hair icon" />
+          </div>
         </article>
         <article class="card">
           <h3>Change <span>COLORING</span></h3>
@@ -94,7 +105,9 @@
             <li>Innovations</li>
             <li>More colors</li>
           </ul>
-          <button><a href="pages/coloring.html">Discover more</a></button>
+          <div>
+            <img class="color-icon" src="images/color.png" alt="Color icon" />
+          </div>
         </article>
         <article class="card">
           <h3>Perfect <span>MAKE UP</span></h3>
@@ -102,8 +115,24 @@
             <li>Glow up</li>
             <li>Beauty Icon</li>
           </ul>
-          <button><a href="pages/makeup.html">Discover more</a></button>
+          <div>
+            <img
+              class="makeup-icon"
+              src="images/makeup.png"
+              alt="Makeup icon"
+            />
+          </div>
         </article>
+      </div>
+    </section>
+    <section class="gallery-section">
+      <div class="info-gallery">
+        <h2>My work</h2>
+        <h3>Choose the style that defines you!</h3>
+      </div>
+
+      <div class="images" data-display>
+        <div class="gallery" data-gallery></div>
       </div>
     </section>
     <section class="contact">

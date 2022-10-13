@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-.navbar-menu {
+.navbar-menu ul {
   width: 30%;
   display: flex;
   flex-direction: row;
@@ -40,10 +40,29 @@
   color: #fff;
   font-weight: 500;
   transition: 0.5s ease-in-out;
+  padding: 1rem 2rem;
 }
 
 .navbar-menu li a:hover {
-  color: #d72323;
+  background-color: #d72323;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .hero-article {
@@ -51,7 +70,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20rem;
+  margin-top: 15rem;
 }
 
 .hero-section h1 {
@@ -128,10 +147,6 @@
   font-size: 1.2rem;
 }
 
-.services {
-  height: 60vh;
-}
-
 .services h2 {
   text-align: center;
   font-size: 4rem;
@@ -188,32 +203,82 @@
   color: #fff;
 }
 
-.services .container .card button {
-  width: 10rem;
-  height: 4rem;
-  font-size: 1rem;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  font-weight: 400;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  margin: 1rem 0;
+.services .container .card .makeup-icon,
+.services .container .card .hair-icon,
+.services .container .card .color-icon {
+  width: 100px;
 }
 
-.services .container .card button:hover {
-  background-color: #d72323;
-  border: none;
+.gallery-section .info-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-section .info-gallery h2 {
+  font-size: 3.5rem;
+}
+
+.gallery-section .info-gallery h3 {
+  font-size: 2rem;
+  color: #d72323;
+  padding-bottom: 1rem;
+}
+
+.gallery-section .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 2rem 4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.gallery-section .gallery img {
+  width: 330px;
+  height: 450px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  opacity: 80%;
+  align-self: center;
+  justify-self: center;
+}
+
+.gallery-section .gallery img:hover {
   transition: 0.5s ease-in-out;
   transform: scale(0.9);
+  opacity: 100%;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newImg {
+  width: 550px;
+  height: 650px;
 }
 
 .contact {
-  height: 70vh;
+  height: 75vh;
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 3rem;
-  margin: 2rem 5rem 2rem 5rem;
+  margin: 3rem 5rem 2rem 5rem;
   padding-left: 4rem;
   background-color: #ededed;
   position: relative;
@@ -240,6 +305,7 @@
   width: 25vw;
   background-color: #fff;
   padding: 2rem 2rem 0 2rem;
+  margin-bottom: 2rem;
 }
 
 .contact .form label {
@@ -290,7 +356,7 @@
   position: absolute;
   width: 30vw;
   height: 40vh;
-  top: 150px;
+  top: 180px;
   right: 150px;
   padding-left: 4rem;
 }
@@ -334,4 +400,155 @@
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-menu {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar .navbar-menu ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-menu li a {
+    font-size: 1rem;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .hero-article {
+    margin-top: 4.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  .hero-section .btn {
+    margin-top: 0.5rem;
+  }
+
+  .hero-section .btn button {
+    width: 8rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .about {
+    flex-direction: column;
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  .about .image {
+    height: 300px;
+    margin: 1rem 0;
+  }
+
+  .about .info {
+    border: 1px solid #313131;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .info h2 {
+    top: 200px;
+    left: 70px;
+    font-size: 1.2rem;
+  }
+
+  .about .info h3 {
+    font-size: 1.2rem;
+  }
+
+  .about .info p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .services h2 {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+
+  .services .container {
+    gap: 1rem;
+    margin: 0 1rem;
+  }
+
+  .services .container .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .services .container .card li {
+    font-size: 1rem;
+  }
+
+  .services .container .card .makeup-icon,
+  .services .container .card .hair-icon,
+  .services .container .card .color-icon {
+    width: 50px;
+  }
+
+  .gallery-section .info-gallery h2 {
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+
+  .gallery-section .info-gallery h3 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-section .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .gallery-section .gallery img {
+    width: 150px;
+    height: 210px;
+  }
+
+  #lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+  }
+
+  #lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .newImg {
+    width: 250px;
+    height: 330px;
+  }
 }

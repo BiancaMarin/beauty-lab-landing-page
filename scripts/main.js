@@ -1,3 +1,11 @@
+const toggleButton = document.querySelector('[data-button]');
+const navMenu = document.querySelector('[data-menu]');
+
+const handleClick = () => {
+  navMenu.classList.toggle('active');
+};
+toggleButton.addEventListener('click', handleClick);
+
 const gallery = document.querySelector('[data-gallery]');
 const displayImage = document.querySelector('[data-display]');
 const imageArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
