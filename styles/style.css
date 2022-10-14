@@ -8,21 +8,30 @@
   scroll-behavior: smooth;
 }
 .hero-section {
-  height: 80vh;
   background-image: url('../images/women.jpg');
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
 }
 
-.navbar {
+.hero-section .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.6s;
+  z-index: 1000;
 }
 
-.navbar-menu ul {
+.hero-section .navbar-menu ul {
   width: 30%;
   display: flex;
   flex-direction: row;
@@ -30,24 +39,25 @@
   align-items: center;
 }
 
-.navbar-menu li {
+.hero-section .navbar-menu li {
   list-style-type: none;
 }
 
-.navbar-menu li a {
+.hero-section .navbar-menu li a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #fff;
+
   font-weight: 500;
   transition: 0.5s ease-in-out;
   padding: 1rem 2rem;
+  color: #fff;
 }
 
-.navbar-menu li a:hover {
+.hero-section .navbar-menu li a:hover {
   background-color: #d72323;
 }
 
-.toggle-button {
+.hero-section .toggle-button {
   position: absolute;
   top: 1rem;
   right: 2rem;
@@ -58,25 +68,25 @@
   height: 20px;
 }
 
-.toggle-button .bar {
+.hero-section .toggle-button .bar {
   height: 3px;
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
 }
 
-.hero-article {
+.hero-section .hero-article {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 15rem;
 }
 
 .hero-section h1 {
   color: #d72323;
   font-size: 6rem;
   font-weight: 600;
+  padding-top: 3rem;
 }
 
 .hero-section p {
@@ -101,6 +111,7 @@
   font-weight: 600;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  margin-bottom: 2rem;
 }
 
 .hero-section .btn button:hover {
@@ -122,11 +133,11 @@
 
 .about .image {
   height: 600px;
-  border: 15px solid #313131;
+  border: 15px solid #141414;
 }
 
 .about .info {
-  border: 1px solid #313131;
+  border: 1px solid #141414;
   margin: 0 3rem;
   padding: 1rem;
 }
@@ -147,6 +158,22 @@
   font-size: 1.2rem;
 }
 
+.salon {
+  height: 50vh;
+  background-image: url('../images/salon.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.services {
+  margin-bottom: 3rem;
+}
+
 .services h2 {
   text-align: center;
   font-size: 4rem;
@@ -156,9 +183,9 @@
 .services .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   margin: 0 5rem;
 }
 
@@ -167,8 +194,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #313131;
-  padding: 1rem;
+  padding: 0.5rem 0;
+  background-color: #ededed;
 }
 
 .services .container .card h3 {
@@ -177,11 +204,13 @@
   justify-content: space-around;
   align-items: center;
   color: #d72323;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
-.services .container .card span {
-  color: #fff;
+.services .container .card h3 span {
+  color: #141414;
+  font-family: 'Hurricane', sans-serif;
+  font-size: 2rem;
 }
 
 .services .container .card ul {
@@ -194,19 +223,47 @@
 
 .services .container .card li {
   list-style-type: none;
-  color: #fff;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .services .container .card a {
   text-decoration: none;
-  color: #fff;
+  color: #141414;
 }
 
 .services .container .card .makeup-icon,
 .services .container .card .hair-icon,
 .services .container .card .color-icon {
   width: 100px;
+}
+
+.services .services-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.services .services-btn button {
+  width: 20rem;
+  height: 4rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 1px solid #141414;
+  color: #141414;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.services .services-btn button:hover {
+  background-color: #d72323;
+  color: #fff;
+  border: none;
+  transition: 0.5s ease-in-out;
+  transform: scale(0.9);
 }
 
 .gallery-section .info-gallery {
@@ -218,6 +275,7 @@
 
 .gallery-section .info-gallery h2 {
   font-size: 3.5rem;
+  padding-bottom: 1rem;
 }
 
 .gallery-section .info-gallery h3 {
@@ -232,18 +290,19 @@
   padding: 2rem 4rem;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+  background-color: #ededed;
 }
 
 .gallery-section .gallery img {
   width: 330px;
   height: 450px;
+  align-self: center;
+  justify-self: center;
   cursor: pointer;
   padding: 0;
   margin: 0;
   opacity: 80%;
-  align-self: center;
-  justify-self: center;
 }
 
 .gallery-section .gallery img:hover {
@@ -253,13 +312,13 @@
 }
 
 #lightbox {
+  display: none;
   position: fixed;
   z-index: 1000;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none;
 }
 
 #lightbox.active {
@@ -274,18 +333,16 @@
 }
 
 .contact {
-  height: 75vh;
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 3rem;
-  margin: 3rem 5rem 2rem 5rem;
-  padding-left: 4rem;
-  background-color: #ededed;
   position: relative;
   background-image: url('https://images.unsplash.com/photo-1503236823255-94609f598e71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 3rem 5rem 2rem 5rem;
+  padding-left: 4rem;
 }
 
 .contact .subtitle {
@@ -331,8 +388,8 @@
 .contact .form button {
   font-size: 1rem;
   background-color: transparent;
-  border: 1px solid #313131;
-  color: #313131;
+  border: 1px solid #141414;
+  color: #141414;
   font-weight: 400;
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -351,7 +408,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #313131;
+  background-color: #141414;
   color: #fff;
   position: absolute;
   width: 30vw;
@@ -369,12 +426,12 @@
   padding-right: 1rem;
 }
 
-.red-background {
+.contact .red-background {
   background-color: #d72323;
 }
 
 .footer {
-  background-color: #313131;
+  background-color: #141414;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -402,57 +459,67 @@
   cursor: pointer;
 }
 
+.error {
+  color: #d72323;
+}
+
 @media screen and (max-width: 767px) {
-  .toggle-button {
+  .hero-section .navbar .logo svg {
+    width: 80px;
+    height: 100px;
+  }
+
+  .hero-section .toggle-button {
     display: flex;
   }
 
-  .navbar {
+  .hero-section .navbar {
     flex-direction: column;
   }
 
-  .navbar-menu {
+  .hero-section .navbar-menu {
     display: none;
     width: 100%;
   }
 
-  .navbar .navbar-menu ul {
+  .hero-section .navbar-menu.active {
+    display: flex;
+  }
+
+  .hero-section .navbar .navbar-menu ul {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
 
-  .navbar-menu li a {
+  .hero-section .navbar-menu ul li a {
     font-size: 1rem;
   }
 
-  .navbar-menu.active {
-    display: flex;
-  }
-
-  .hero-article {
+  .hero-section .hero-article {
     margin-top: 4.5rem;
   }
 
-  .hero-section h1 {
+  .hero-section .hero-article h1 {
     font-size: 3rem;
   }
 
-  .hero-section p {
+  .hero-section .hero-article p {
     font-size: 1.2rem;
   }
 
-  .hero-section .btn {
+  .hero-section .hero-article .btn {
     margin-top: 0.5rem;
   }
 
-  .hero-section .btn button {
+  .hero-section .hero-article .btn button {
     width: 8rem;
     height: 2rem;
     font-size: 0.8rem;
   }
 
   .about {
+    display: flex;
     flex-direction: column;
     margin: 1rem 1rem 0 1rem;
   }
@@ -463,13 +530,13 @@
   }
 
   .about .info {
-    border: 1px solid #313131;
-    margin: 1rem;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid #313131;
+    margin: 1rem;
+    padding: 0;
   }
 
   .about .info h2 {
@@ -483,12 +550,21 @@
   }
 
   .about .info p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 
+  .salon {
+    height: 30vh;
+    margin: 1rem 0;
+  }
+
+  .services {
+    margin-bottom: 1rem;
+  }
+
   .services h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 1rem 0;
   }
 
@@ -498,11 +574,15 @@
   }
 
   .services .container .card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .services .container .card h3 span {
+    font-size: 1rem;
   }
 
   .services .container .card li {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .services .container .card .makeup-icon,
@@ -511,13 +591,29 @@
     width: 50px;
   }
 
+  .services .services-btn {
+    margin-top: 1rem;
+  }
+
+  .services .services-btn button {
+    width: 15rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .gallery-section {
+    margin-bottom: 1rem;
+  }
+
   .gallery-section .info-gallery h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding-top: 1rem;
   }
 
   .gallery-section .info-gallery h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   .gallery-section .gallery {
@@ -531,24 +627,156 @@
     height: 210px;
   }
 
-  #lightbox {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-  }
-
-  #lightbox.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .newImg {
     width: 250px;
     height: 330px;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: none;
+  }
+
+  .contact .subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .contact h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+  }
+
+  .contact .form {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+
+  .contact .form input {
+    border: none;
+    background-color: #ededed;
+    height: 15px;
+  }
+
+  .contact .form textarea {
+    border: none;
+    background-color: #ededed;
+    height: 80px;
+  }
+
+  .contact .form input::placeholder,
+  .contact .form textarea::placeholder {
+    font-size: 0.5rem;
+  }
+
+  .contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .contact .contact-info p {
+    font-size: 0.8rem;
+  }
+
+  .contact .contact-info i {
+    padding-right: 0.5rem;
+  }
+
+  .contact .red-background {
+    display: none;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .footer p {
+    font-size: 0.6rem;
+  }
+
+  .footer .social-icons {
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer .social-icons i {
+    font-size: 1rem;
+  }
+
+  .footer .logo svg {
+    width: 30px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .hero-section .navbar-menu ul li a {
+    font-size: 1rem;
+  }
+
+  .hero-section .hero-article {
+    margin-top: 4.5rem;
+  }
+
+  .hero-section .hero-article h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-section .hero-article p {
+    font-size: 1.5rem;
+  }
+
+  .hero-section .hero-article .btn {
+    margin-top: 0.8rem;
+  }
+
+  .hero-section .hero-article .btn button {
+    width: 8rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .about .image {
+    height: 400px;
+  }
+
+  .about .info {
+    margin: 0 3rem;
+    padding: 1rem;
+  }
+
+  .about .info h2 {
+    left: 180px;
+    font-size: 2.5rem;
+  }
+
+  .about .info h3 {
+    font-size: 1.5rem;
+  }
+
+  .about .info p {
+    font-size: 1rem;
   }
 }

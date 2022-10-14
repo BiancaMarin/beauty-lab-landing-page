@@ -16,7 +16,7 @@
     <script defer src="scripts/main.js"></script>
   </head>
   <body>
-    <main class="hero-section">
+    <main class="hero-section" id="home">
       <nav class="navbar">
         <div class="logo">
           <svg
@@ -51,11 +51,11 @@
         </div>
         <div class="navbar-menu" data-menu>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">About</a></li>
-            <li><a href="index.html">Services</a></li>
-            <li><a href="index.html">Gallery</a></li>
-            <li><a href="index.html">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -63,17 +63,13 @@
         <h1>Beauty Lab</h1>
         <p>Elevate stylish contemporary</p>
         <div class="btn">
-          <button>Discover more</button>
+          <button>Contact me</button>
         </div>
       </article>
     </main>
-    <section class="about">
+    <section class="about" id="about">
       <div>
-        <img
-          class="image"
-          src="https://images.unsplash.com/photo-1603570388466-eb4fe5617f0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-          alt=""
-        />
+        <img class="image" src="images/about-photo.jpg" alt="about-photo" />
       </div>
       <article class="info">
         <h2>It's all about passion...</h2>
@@ -86,7 +82,8 @@
         </p>
       </article>
     </section>
-    <section class="services">
+    <section class="salon"></section>
+    <section class="services" id="services">
       <h2>My services</h2>
       <div class="container">
         <article class="card">
@@ -124,8 +121,11 @@
           </div>
         </article>
       </div>
+      <div class="services-btn">
+        <button>View services and pricing</button>
+      </div>
     </section>
-    <section class="gallery-section">
+    <section class="gallery-section" id="gallery">
       <div class="info-gallery">
         <h2>My work</h2>
         <h3>Choose the style that defines you!</h3>
@@ -135,16 +135,19 @@
         <div class="gallery" data-gallery></div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="form-container">
         <h3 class="subtitle">Get in touch</h3>
-        <form class="form">
+        <form class="form" data-form method="GET">
           <label for="name">Your name</label>
           <input type="text" id="name" placeholder="Ania Spelld" />
+          <p class="error" data-name></p>
           <label for="phone">Phone number</label>
           <input type="text" id="phone" placeholder="+40 777 777 777" />
+          <p class="error" data-phone></p>
           <label for="email">E-mail</label>
           <input type="text" id="email" placeholder="ania@spelld.com" />
+          <p class="error" data-email></p>
           <label for="message">Message</label>
           <textarea
             name="message"
@@ -153,6 +156,7 @@
             rows="10"
             placeholder="Your message here..."
           ></textarea>
+          <p class="error" data-message></p>
           <button>Send</button>
         </form>
       </div>
