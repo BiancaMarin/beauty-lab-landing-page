@@ -155,7 +155,7 @@
 }
 
 .about .info p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .salon {
@@ -477,6 +477,11 @@
     flex-direction: column;
   }
 
+  .hero-section .navbar .logo svg {
+    width: 40px;
+    height: 80px;
+  }
+
   .hero-section .navbar-menu {
     display: none;
     width: 100%;
@@ -596,8 +601,8 @@
   }
 
   .services .services-btn button {
-    width: 15rem;
-    height: 3rem;
+    width: 12rem;
+    height: 2rem;
     font-size: 0.8rem;
     margin-bottom: 0;
   }
@@ -732,6 +737,11 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+  .hero-section .navbar .logo svg {
+    width: 60px;
+    height: 80px;
+  }
+
   .hero-section .navbar-menu ul li a {
     font-size: 1rem;
   }
@@ -758,6 +768,10 @@
     font-size: 0.8rem;
   }
 
+  .about {
+    margin: 1.5rem;
+  }
+
   .about .image {
     height: 400px;
   }
@@ -768,8 +782,9 @@
   }
 
   .about .info h2 {
-    left: 180px;
-    font-size: 2.5rem;
+    top: 20;
+    left: 20px;
+    font-size: 1.5rem;
   }
 
   .about .info h3 {
@@ -778,5 +793,125 @@
 
   .about .info p {
     font-size: 1rem;
+  }
+
+  .services {
+    margin: 1rem;
+  }
+
+  .services h2 {
+    font-size: 2.5rem;
+  }
+
+  .services .container {
+    gap: 1rem;
+    margin: 0 2rem;
+  }
+
+  .services .container .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .services .container .card h3 span {
+    font-size: 1.5rem;
+  }
+
+  .services .container .card li {
+    font-size: 1rem;
+  }
+
+  .services .container .card .makeup-icon,
+  .services .container .card .hair-icon,
+  .services .container .card .color-icon {
+    width: 70px;
+  }
+
+  .services .services-btn button {
+    width: 12rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .gallery-section {
+    margin-bottom: 1rem;
+  }
+
+  .gallery-section .info-gallery h2 {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+
+  .gallery-section .info-gallery h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .gallery-section .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .gallery-section .gallery img {
+    width: 180px;
+    height: 240px;
+  }
+
+  .newImg {
+    width: 280px;
+    height: 360px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr 200px;
+    margin: 0 1rem;
+    padding-left: 1rem;
+  }
+
+  .contact .subtitle {
+    font-size: 2.5rem;
+  }
+
+  .contact h3 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .contact .form {
+    width: 35vw;
+  }
+
+  .contact .form label {
+    font-weight: 600;
+  }
+
+  .contact .form input {
+    height: 20px;
+  }
+
+  .contact .contact-info {
+    padding-left: 2rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+
+  .contact i {
+    padding-right: 0.5rem;
+  }
+
+  .footer {
+    padding: 0 2rem;
+  }
+
+  .footer p {
+    font-size: 1rem;
+  }
+
+  .footer .logo svg {
+    width: 60px;
+    height: 80px;
   }
 }
