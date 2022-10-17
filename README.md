@@ -1,1 +1,1 @@
-# beauty-lab-landing-page
+# Responsive Landing Page using HTML, CSS and Javascript | Beauty Lab Website Design
